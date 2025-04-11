@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Management</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Config</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Nav Bar -->
+  <nav>
+    <div class="container">
+      <h1>Drone</h1>
+      <ul>
+        <li><a href="#" onclick="showPage('configPage')">View Config</a></li>
+        <li><a href="#" onclick="showPage('temperatureForm')">Temperature Log Form</a></li>
+        <li><a href="#" onclick="showPage('viewLogs')">View Logs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Page 1: View Config -->
+  <div id="configPage" class="page">
+    <div class="card">
+      <label for="droneId">Enter Drone ID:</label>
+      <input type="number" id="droneId" placeholder="Drone ID" required>
+      <button id="viewConfigBtn">View Config</button>
+      <div id="configResult" class="result"></div>
+    </div>
+  </div>
+
+
+  <section id="temperatureForm" class="page" style="display: none;">
+    <h1>Temperature Log</h1>
+    <form id="temperature-log-form">
+        <!--
+        <input type="number" id="drone_id" placeholder="Drone ID" required />
+        <input type="text" id="drone_name" placeholder="Drone Name" required />
+        -->
+        <input type="number" id="celsius" placeholder="Temperature (Celsius)" required />
+        <!--
+        <input type="text" id="country" placeholder="Country" required />
+        -->
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+
+  <section id="viewLogs" class="page" style="display: none;">
+    <h1>Drone Logs</h1>
+    <br>
+    <h3>loading please wait....</h3>
+    <table id="logs-table">
+        <thead>
+            <tr>
+                <th>Created</th>
+                <th>Country</th>
+                <th>Drone ID</th>
+                <th>Drone Name</th>
+                <th>Celsius</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Logs Data -->
+        </tbody>
+    </table>
+    <!---->
+    <div class="pagination-controls">
+        <button id="prev-page">Previous</button>
+        <span id="page-number" >Page 1</span>
+        <button id="next-page">Next</button>
+    </div>
+  </section>
+  <!-- Log entries will be added here by JavaScript -->
+  </tbody>
+  </table>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  </body>
+  </html>
